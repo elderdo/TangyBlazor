@@ -11,4 +11,15 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Pages\LearnBlazor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\LearnBlazor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tangy_Models\Tangy_Models.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
