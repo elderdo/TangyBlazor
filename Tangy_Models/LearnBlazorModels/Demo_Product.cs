@@ -7,6 +7,6 @@ public class Demo_Product
     public string Name { get; set; } = string.Empty;
     public double Price { get; set; }
     public bool IsActive { get; set; }
-    public List<Demo_ProductProp> ProductProperties { get; set; }
+    public List<Demo_ProductProp> ProductProperties { get; set; } = new();
 }
 
