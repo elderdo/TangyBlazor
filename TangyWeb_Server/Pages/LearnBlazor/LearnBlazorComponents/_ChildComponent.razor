@@ -1,4 +1,4 @@
-﻿<h3>_ChildComponent</h3>
+﻿
 
 <div>
     <div class="alert alert-info">@Title</div>
@@ -7,7 +7,12 @@
         {
             <span>@ChildContent</span>
         }
+        else
+        {
+            <p>Hello, from an Empty Render Fragment</p>
+        }
     </div>
+    <button class="btn btn-danger" @onclick="OnButtonClick">Button to be Clicked</button>
 </div>
 
 @code {
@@ -15,5 +20,7 @@
     public string Title { get; set; } = string.Empty;
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+    [Parameter]
+    public EventCallback OnButtonClick { get; set; }
 }
 
