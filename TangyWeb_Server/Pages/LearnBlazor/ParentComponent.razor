@@ -2,12 +2,20 @@
 <h3>Parent Child Relation</h3>
 
 <_ChildComponent OnButtonClick="ShowMessage" Title="This title is passed as a parameter from the Parent Component">
-    Render Fragment From Parent! WooHOO!
+    <ChildContent>Render Fragment From Parent! WooHOO!</ChildContent>
+    @*<DangerChildContent>Danger Content from RenderFragment! WooHOO!</DangerChildContent>*@
 </_ChildComponent>
 <p><b>@messageText</b></p>
-<_ChildComponent OnButtonClick="ShowMessage" title="This is a second Component"></_ChildComponent>
+<_AnotherChildComponent InputAttributes="InputAttributesFromParent"></_AnotherChildComponent>
+@*<_ChildComponent OnButtonClick="ShowMessage" title="This is a second Component"></_ChildComponent>*@
 
 @code {
+    public Dictionary<string, object> InputAttributesFromParent { get; set; } = new Dictionary<string, object>
+    {
+        {"required", "required"},
+        {"placeholder", "Enter name from Parent" },
+        {"maxlength", 5}
+    };
     public string messageText = string.Empty;
     private void ShowMessage()
     {
