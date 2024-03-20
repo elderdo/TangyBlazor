@@ -15,6 +15,9 @@
     <None Remove="Pages\LearnBlazor\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="toastr" Version="2.1.1" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Tangy_Models\Tangy_Models.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
